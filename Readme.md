@@ -40,3 +40,40 @@ in addition we need to create two files
 
 .prettieringore fro igorning file
 -------------------------------------------------------------------------------------------------------------------
+
+writed port number and mongodb url in env
+first created databse from mongodb atls
+then copy link and pasted in env
+
+-------------------------------------------------------------------------------------------------------------------
+creted the database name  and stored in constats.js file beacause if we ever have to change db name we dont have do change from all code so its easier to store at constant,js file
+export const DB_NAME="videotube"
+
+// storing database name
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+now installing mongoose express dotenv
+
+ npm i mongoose express dotenv
+
+
+-------------------------------------------------------------------------------------------------------------------
+      #  CONNECTING DATABASE
+       -------------------------------------------------------------------------------------------------------------------
+       1- save url of databse copied from mogndb in a variable MONGODB_URl we can give any name
+
+       2- after that we have to give the name to the database so i have give name to the database in constant.js
+       export const DB_NAME="videotube"
+
+       3- then in db/index.js 
+       we imported mongoose
+       and imported dbname from constant.js
+
+       ```javascript
+       import mongoose from "mongoose";
+import { DB_NAME } from "../constants.js";
+       ```
+
+       4- then created asyc function in index.js to connect ro the databse

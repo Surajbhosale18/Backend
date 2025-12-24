@@ -77,3 +77,78 @@ import { DB_NAME } from "../constants.js";
        ```
 
        4- then created asyc function in index.js to connect ro the databse
+
+
+
+
+       -------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+i skiped some notes which are not undrstanid in which created utility folder , middleware etc
+
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+ now creating model for user and video in modles folder 
+ user.model.js
+ video.model.js
+$$
+for user
+$$
+ {
+  _id: ObjectId,                // Primary Key
+  watchHistory: [ObjectId],     // Array of Video IDs
+  username: String,
+  email: String,
+  fullName: String,
+  avatar: String,               // profile image URL
+  coverImage: String,           // cover photo URL
+  password: String,
+  refreshToken: String,
+  createdAt: Date,
+  updatedAt: Date
+}
+f**or video**
+{
+  _id: ObjectId,            // Primary Key
+  videoFile: String,        // video URL / path
+  thumbnail: String,        // thumbnail image URL
+  owner: ObjectId,          // reference to users
+  title: String,
+  description: String,
+  duration: Number,         // in seconds
+  views: Number,
+  isPublished: Boolean,
+  createdAt: Date,
+  updatedAt: Date
+}
+
+
+
+now importing new model
+npm i mongoose-paginate-v2
+
+aggrigate model 
+
+
+--------------------------------------------------------------------------------------------------------
+# now we will inatll bcyrpt library to hash our passoword
+npm i bcryptjs
+
+A library to help you hash passwords.
+
+--------------------------------------------------------------------------------------------------------
+# also installed jsonwebtoke
+for passord incription dand dicryption
+
+----------------------------------------------------
+
+
+
